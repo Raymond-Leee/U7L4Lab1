@@ -320,8 +320,7 @@ public class ArrayListAlgorithms {
     public static ArrayList<Integer> modes(int[] numList)
     {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        int currentOccurence = numList[0];
-        int maxOccurrence = 0;
+        int maxOccurrence = 1;
         for (int i = 0; i < numList.length; i++)
         {
             int count = 0;
@@ -332,7 +331,7 @@ public class ArrayListAlgorithms {
                     count++;
                 }
             }
-            if (count > maxOccurrence)
+            if (count >= maxOccurrence)
             {
                 maxOccurrence = count;
                 list.add(numList[i]);
